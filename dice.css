@@ -119,3 +119,33 @@
 .rolling.dice > div {
     animation: rolling 600ms steps(6, end) alternate infinite;
 }
+
+
+
+/* 
+    Value presentaion
+*/
+
+.dice[data-value="6"] > div {
+    transform: translateY(-200px);
+}
+
+.dice[data-value="5"] > div {
+    transform: translateY(-160px);
+}
+
+.dice[data-value="4"] > div {
+    transform: translateY(-120px);
+}
+
+.dice[data-value="3"] > div {
+    transform: translateY(-80px);
+}
+
+.dice[data-value="2"] > div {
+    transform: translateY(-40px);
+}
+
+.dice[data-value="1"] > div {
+    transform: translateY(0);
+}
