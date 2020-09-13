@@ -105,12 +105,6 @@
 
 
 /* Animation */
-
-:root {
-    --total: 6s;
-    --frame-dice: 1s;
-}
-
 @keyframes rolling {
     from {
         transform: translateY(0)
@@ -123,5 +117,5 @@
 
 
 .rolling.dice > div {
-    animation: rolling 400ms steps(6, end) alternate infinite;
+    animation: rolling 600ms steps(6, end) alternate infinite;
 }
