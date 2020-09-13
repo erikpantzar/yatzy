@@ -1,15 +1,14 @@
 .dice {
-    background: #efefef;
-    display: flex;
-    flex-direction: column;
+    height: 40px;
     width: 40px;
+    overflow: hidden;
 }
 
 .dice > div {
     width: 40px;
     height: 40px;
+    background: #efefefef;
 }
-
 
 .one {
     display: flex;
@@ -25,7 +24,6 @@
     width: 5px;
 }
 
-.two {}
 
 .two-container,
 .three-container {
@@ -73,4 +71,57 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+/* 
+        Folding ambition
+        In order to create some kind of 3d dice
+*/
+
+/* .dice-container {
+    transform: rotateY(45deg) rotateX(15deg);
+} */
+/* 
+.one {
+    transform: rotateX(15deg) translateY(1px);
+}
+
+.two {
+    transform: rotateX(75deg) translateY(-57px);
+}
+
+.three {
+    transform: rotateX(165deg) translateY(72px);
+}
+
+.four {
+    transform: rotateX(165deg) translateY(72px);
+}
+
+
+*/
+
+
+
+
+/* Animation */
+
+:root {
+    --total: 6s;
+    --frame-dice: 1s;
+}
+
+@keyframes rolling {
+    from {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(-240px)
+    }
+}
+
+
+.rolling.dice > div {
+    animation: rolling 400ms steps(6, end) alternate infinite;
 }
