@@ -55,34 +55,36 @@ const getBonus = (el) => {
   return partSum >= 63
 }
 
-const getPair = () => {
-  // low to high
-  const dices = diceToArray().sort((a, b) => a - b)
+// default to two for a pair
+const getTheSame = (array, amount = 2) => {
+  let result = 0
 
-  let pair = 0
+  const getSame = (array, index = 0) => {
+    const same = array.filter((n) => n === array[index])
 
-  dices.forEach((dice, index) => {
-    if (dices.slice(index + 1, dices.length).includes(dice)) {
-      pair = dice * 2
+    if (same.length >= amount) {
+      result = same[0] * amount
+    } else {
+      if (index !== array.length) {
+        getSame(array, index + 1)
+      }
     }
-  })
+  }
 
-  return pair
+  getSame(array)
+  return result
+}
+
+const getPair = () => {
+  // hi to low
+  const dices = diceToArray().sort((a, b) => b - a)
+  return getTheSame(dices, 2)
 }
 
 const getTwoPair = () => {
-  // const dices = diceToArray().sort((a, b) => a - b)
-  const dices = [3, 3, 9, 8, 2].sort((a, b) => a - b)
-  const first = dices.filter((a) => a === dices[0])
-  let second = []
-
-  if (first.length === 2) {
-    console.log('one pair atleast')
-    const dicesFiltered = dices.filter((b) => b !== first[0])
-    second = dicesFiltered.filter((b) => b === dicesFiltered[0]).splice(0, 2)
-  }
-
-  console.log({ first, second })
+  // const dices = diceToArray()
+  const dices = [2, 4, 5, 3, 3, 3, 3].sort((a, b) => b - a)
+  console.log(getTheSame(dices, 2))
 
   return 666
 }
