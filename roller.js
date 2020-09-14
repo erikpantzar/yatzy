@@ -1,3 +1,23 @@
+const diceToArray = () => {
+  const dices = document.querySelectorAll('[data-value]')
+  let values = []
+
+  dices.forEach((dice) => {
+    values.push(Number(dice.dataset.value))
+  })
+
+  return values
+}
+
+const setValueToDice = (diceElement) => {
+  const randomDiceValue = () => Math.round(Math.random() * (6 - 1) + 1)
+
+  const newValue = randomDiceValue()
+  diceElement.dataset.value = newValue
+
+  return newValue
+}
+
 const button = document.querySelector('[data-attr="js-roller"]')
 
 if (button) {
@@ -6,9 +26,9 @@ if (button) {
   })
 }
 
-const rollDice = () => {
+const rollDice = (skipAnimation = false) => {
   const dices = document.querySelectorAll('.dice-container')
-  const ROLLING_ANIMATION_TIME = 700
+  const ROLLING_ANIMATION_TIME = skipAnimation ? 1 : 700
   const ROLLING_ANIMATION_CLASSNAME = 'rolling'
 
   dices.forEach((dice) => {
@@ -32,10 +52,5 @@ const rollDice = () => {
   }, ROLLING_ANIMATION_TIME)
 }
 
-const setValueToDice = (diceElement) => {
-  const randomDiceValue = () => Math.round(Math.random() * (6 - 1) + 1)
-  diceElement.dataset.value = randomDiceValue()
-}
-
 // initial roll
-rollDice()
+rollDice(true)
