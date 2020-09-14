@@ -1,84 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    
-    <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="./dice.css" />
-  </head>
 
-  <body>
-      
-    <main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yatzy caddee - never play a game again</title>
+
+  <link rel="stylesheet" href="./reset.css" />
+  <link rel="stylesheet" href="./dice.css" />
+  <link rel="stylesheet" href="./button.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      font: 1rem/1.5 sans-serif;
+      color: #444;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      box-sizing: border-box;
+      padding: 1rem;
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section>
+
+      <label class="label-dice dice-container" for="one" data-value="3">
+        <input type="checkbox" id="one"></input>
+        <div class="dice">
+          <div class="one">
+            <div class="dot"></div>
+          </div>
+          <div class="two">
+            <div class="two-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="three">
+            <div class="three-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="four">
+            <div class="four-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="four-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="five">
+            <div class="five-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="five-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+
+            <div class="dot"></div>
+          </div>
+
+          <div class="six">
+            <div class="six-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="six-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </label>
+
+      <label class="label-dice dice-container" for="two" data-value="2">
+        <input type="checkbox" id="two"></input>
+        <div class="dice">
+          <div class="one">
+            <div class="dot"></div>
+          </div>
+          <div class="two">
+            <div class="two-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="three">
+            <div class="three-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="four">
+            <div class="four-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="four-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="five">
+            <div class="five-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="five-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+
+            <div class="dot"></div>
+          </div>
+
+          <div class="six">
+            <div class="six-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="six-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+
+      </label>
+
+
+      <label class="label-dice dice-container" for="three">
+        <input type="checkbox" id="three"></input>
+        <div class="dice">
+          <div class="one">
+            <div class="dot"></div>
+          </div>
+          <div class="two">
+            <div class="two-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="three">
+            <div class="three-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="four">
+            <div class="four-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="four-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="five">
+            <div class="five-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="five-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+
+            <div class="dot"></div>
+          </div>
+
+          <div class="six">
+            <div class="six-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="six-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+      </label>
+
+
+      <label class="label-dice dice-container" for="four"  data-value="3">
+        <input type="checkbox" id="four"></input>
+        <div class="dice">
+          <div class="one">
+            <div class="dot"></div>
+          </div>
+          <div class="two">
+            <div class="two-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="three">
+            <div class="three-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="four">
+            <div class="four-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="four-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="five">
+            <div class="five-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="five-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+
+            <div class="dot"></div>
+          </div>
+
+          <div class="six">
+            <div class="six-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="six-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+
+
+      </label>
+
+
+      <label class="label-dice dice-container" for="five"  data-value="4">
+        <input type="checkbox" id="five"></input>
+        <div class="dice">
+          <div class="one">
+            <div class="dot"></div>
+          </div>
+          <div class="two">
+            <div class="two-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="three">
+            <div class="three-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="four">
+            <div class="four-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="four-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <div class="five">
+            <div class="five-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="five-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+
+            <div class="dot"></div>
+          </div>
+
+          <div class="six">
+            <div class="six-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="six-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+
+      </label>
+    </section>
 
     <section>
-    <div class="dice" data-value="6">
-      <div class="one">
-        <div class="dot"></div>
-      </div>
-      <div class="two">
-        <div class="two-container">
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
-      </div>
-      <div class="three">
-        <div class="three-container">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
-      </div>
-      <div class="four">
-        <div class="four-container">
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
-        <div class="four-container">
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
-      </div>
-      <div class="five">
-          <div class="five-container">
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-            <div class="five-container">
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-        
-        <div class="dot"></div>
-      </div>
-
-      <div class="six">
-        <div class="six-container">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-    </div>
-    <div class="six-container">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-    </div>
-      </div>
-    </div>
-</section>
-
-<section>
-    <button class="button-roller" data-attr="js-roller">
-        Roll
-    </button>
-</section>
+      <button class="button-roller" data-attr="js-roller">Roll</button>
+    </section>
+  </main>
 
 
-</main>
+  <footer class="footer">
+    <p>
+      Source on <a class="link-button" href="https://github.com/erikpantzar/yatzy-caddee">Github</a>
+    </p>
+  </footer>
 
+  <script src="./roller.js"></script>
 
-<script src="./roller.js"></script>
-  </body>
+</body>
+
 </html>

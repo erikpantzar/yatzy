@@ -11,5 +11,11 @@
   "dependencies": {
     "eslint": "^7.9.0",
     "prettier": "^2.1.1"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
   }
 }

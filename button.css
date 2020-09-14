@@ -1,0 +1,16 @@
+.link-button {
+  border: 1px solid lavender;
+  padding: 8px 12px;
+  background: #eee;
+  color: skyblue;
+
+  transition: color 200ms ease-in-out, background 200ms ease-in-out;
+}
+
+.link-button:hover {
+  background: darkcyan;
+  color: lavender;
+
+  transition: color 200ms ease-in-out, background 200ms ease-in-out;
+}
+

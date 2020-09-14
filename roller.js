@@ -1,19 +1,29 @@
-const button = document.querySelector('[data-attr="js-roller"]');
+const button = document.querySelector('[data-attr="js-roller"]')
 
 if (button) {
-  button.addEventListener("click", () => {
-    rollDice();
-  });
+  button.addEventListener('click', () => {
+    rollDice()
+  })
 }
 
 const rollDice = () => {
-  const dice = document.querySelector(".dice");
-  const ROLLING_ANIMATOIN = 700;
-  const ROLLING_ANIMATION_CLASSNAME = "rolling";
+  const dices = document.querySelectorAll('.dice-container')
+  const ROLLING_ANIMATOIN = 700
+  const ROLLING_ANIMATION_CLASSNAME = 'rolling'
 
-  dice.classList.add(ROLLING_ANIMATION_CLASSNAME);
+  dices.forEach((dice) => dice.classList.add(ROLLING_ANIMATION_CLASSNAME))
 
   setTimeout(() => {
-    dice.classList.remove(ROLLING_ANIMATION_CLASSNAME);
-  }, ROLLING_ANIMATOIN);
-};
+    dices.forEach((dice) => {
+      // stop animation
+      dice.classList.remove(ROLLING_ANIMATION_CLASSNAME)
+      // set the value to each dice element
+      setValueToDice(dice)
+    })
+  }, ROLLING_ANIMATOIN)
+}
+
+const setValueToDice = (diceElement) => {
+  const randomDiceValue = () => Math.round(Math.random() * (6 - 1) + 1)
+  diceElement.dataset.value = randomDiceValue()
+}

@@ -97,11 +97,7 @@
 .four {
     transform: rotateX(165deg) translateY(72px);
 }
-
-
 */
-
-
 
 
 /* Animation */
@@ -115,9 +111,27 @@
     }
 }
 
+.dice-container.rolling .dice > div {
+    animation: rolling 700ms steps(6, end) alternate infinite;
+}
 
-.rolling.dice > div {
-    animation: rolling 600ms steps(6, end) alternate infinite;
+.dice-container.rolling:nth-child(2) .dice > div {
+    animation-duration: 650ms;
+}
+
+.dice-container.rolling:nth-child(2) .dice > div {
+    animation-delay: 250ms;
+    animation-duration: 700ms;
+}
+
+.dice-container.rolling:nth-child(3) .dice > div {
+    animation-delay: 50ms;
+    animation-duration: 650ms;
+}
+
+.dice-container.rolling:nth-child(5) .dice > div {
+    animation-delay: 300ms;
+    animation-duration: 550ms;
 }
 
 
@@ -126,26 +140,43 @@
     Value presentaion
 */
 
-.dice[data-value="6"] > div {
+[data-value="6"] .dice > div {
     transform: translateY(-200px);
 }
 
-.dice[data-value="5"] > div {
+[data-value="5"] .dice > div {
     transform: translateY(-160px);
 }
 
-.dice[data-value="4"] > div {
+[data-value="4"] .dice > div {
     transform: translateY(-120px);
 }
 
-.dice[data-value="3"] > div {
+[data-value="3"] .dice > div {
     transform: translateY(-80px);
 }
 
-.dice[data-value="2"] > div {
+[data-value="2"] .dice > div {
     transform: translateY(-40px);
 }
 
-.dice[data-value="1"] > div {
+[data-value="1"] .dice > div {
     transform: translateY(0);
+}
+
+
+.label-dice {
+    text-indent: -999px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.label-dice input {
+    display: none;
+}
+
+input:checked + .dice  {
+    background: red;
 }
