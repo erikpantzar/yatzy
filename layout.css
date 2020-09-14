@@ -3,10 +3,34 @@
 
   align-items: stretch;
   justify-content: space-evenly;
+  
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}
+
+@media (min-width: 480px) {
+  .layout-dice-section {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 768px) {
   .layout-dice-section {
-    max-width: 400px;
+    max-width: 40vw;
+  }
+}
+
+ /* @media (min-width: 480px) {
+  .layout-yatzy-table {}
+}  */
+
+
+@media (min-width: 480px) {
+  .layout-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
   }
 }

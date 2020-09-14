@@ -4,7 +4,7 @@
 
 .table {
   display: grid;
-  grid-template-columns: 135px repeat(4, 120px [col-end]);
+  grid-template-columns: 135px repeat(2, 120px [col-end]);
 }
 
 .table-labels label {
@@ -20,13 +20,13 @@
   border-top: 1px solid #aaa;
 }
 
-.table-values input:nth-child(7),
 .table-values input:nth-child(8),
-.table-values input:nth-child(18),
+.table-values input:nth-child(9),
+.table-values input:nth-child(19),
 
 .table-labels label:nth-child(8),
-.table-labels label:nth-child(7),
-.table-labels label:nth-child(18)
+.table-labels label:nth-child(9),
+.table-labels label:nth-child(19)
  {
   border: 1px solid brown;
   z-index: 3;
