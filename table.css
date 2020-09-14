@@ -1,0 +1,52 @@
+:root {
+  --cell-height: 40px;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: 135px repeat(4, 120px [col-end]);
+}
+
+.table-labels label {
+  border: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  border-right: 0;
+  border-top: 0;
+  padding-top: 1px;
+}
+
+.table-labels label:first-child {
+  height: 39px;
+  border-top: 1px solid #aaa;
+}
+
+.table-values input:nth-child(7),
+.table-values input:nth-child(8),
+.table-values input:nth-child(18),
+
+.table-labels label:nth-child(8),
+.table-labels label:nth-child(7),
+.table-labels label:nth-child(18)
+ {
+  border: 1px solid brown;
+  z-index: 3;
+}
+
+.table-labels,
+.table-values {
+  display: grid; 
+  grid-template-rows: repeat(19, var(--cell-height) [col-start]);
+}
+
+.table-labels label {
+  line-height: var(--cell-height);
+  height: var(--cell-height);
+  padding: 0 0 0 5px;
+}
+
+.table-values input {
+  width: 100%;
+  height: var(--cell-height);
+  text-align: center;
+  border: 1px solid #aaa;
+}

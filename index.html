@@ -7,38 +7,37 @@
   <title>Yatzy caddee - never play a game again</title>
 
   <link rel="apple-touch-icon" sizes="57x57" href="./favicon/">
-<link rel="apple-touch-icon" sizes="60x60" href="./favicon//apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="./favicon//apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="./favicon//apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="./favicon//apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="./favicon//apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="./favicon//apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="./favicon//apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="./favicon//apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="./favicon//android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./favicon//favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="./favicon//favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./favicon//favicon-16x16.png">
-<link rel="manifest" href="./manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="60x60" href="./favicon//apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./favicon//apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./favicon//apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./favicon//apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./favicon//apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./favicon//apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./favicon//apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon//apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./favicon//android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./favicon//favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon//favicon-16x16.png">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="./reset.css" />
   <link rel="stylesheet" href="./dice.css" />
   <link rel="stylesheet" href="./button.css" />
+  <link rel="stylesheet" href="./table.css">
+  <link rel="stylesheet" href="./layout.css">
   <style>
-    body {
-      font-family: sans-serif;
-      font: 1rem/1.5 sans-serif;
-      color: #444;
-    }
-
+  
     .footer {
-      position: absolute;
+      position: sticky;
       bottom: 0;
       left: 0;
       right: 0;
+      display: block;
+      width: 100%;
 
       box-sizing: border-box;
       padding: 1rem;
@@ -49,8 +48,8 @@
 
 <body>
   <main>
-    <section>
-
+    <section class="layout-dice-section">
+      <div>
       <label class="label-dice dice-container" for="one" data-value="3">
         <input type="checkbox" id="one"></input>
         <div class="dice">
@@ -225,7 +224,7 @@
       </label>
 
 
-      <label class="label-dice dice-container" for="four"  data-value="3">
+      <label class="label-dice dice-container" for="four" data-value="3">
         <input type="checkbox" id="four"></input>
         <div class="dice">
           <div class="one">
@@ -280,12 +279,9 @@
             </div>
           </div>
         </div>
-
-
       </label>
 
-
-      <label class="label-dice dice-container" for="five"  data-value="4">
+      <label class="label-dice dice-container" for="five" data-value="4">
         <input type="checkbox" id="five"></input>
         <div class="dice">
           <div class="one">
@@ -340,12 +336,209 @@
             </div>
           </div>
         </div>
-
       </label>
+
+    </div>
+
+      <button class="button-roller layout-button-roller" data-attr="js-roller">Roll</button>
     </section>
 
-    <section>
-      <button class="button-roller" data-attr="js-roller">Roll</button>
+    <section class="table">
+      <!--  -->
+
+      <header class="table-labels">
+        <label>
+          Name
+        </label>
+        <label>
+          Ones
+        </label>
+
+        <label>
+          Threes
+        </label>
+
+        <label>
+          Fours
+        </label>
+
+        <label>
+          Fives
+        </label>
+
+
+        <label>
+          Sixes
+        </label>
+
+        <label class="table-label-highlight">
+          Sum
+        </label>
+
+        <label class="table-label-highlight">
+          Bonus
+        </label>
+
+        <label class="">
+          Pair
+        </label>
+
+        <label>
+          Two Pair
+        </label>
+
+        <label>
+          Three of a kind
+        </label>
+
+        <label>
+          Four of a kind
+        </label>
+
+        <label>
+          Full house
+        </label>
+
+        <label>
+          Low Straight
+        </label>
+
+        <label>
+          High Straight
+        </label>
+
+        <label>
+          Chance
+        </label>
+
+        <label>
+          Yatzy
+        </label>
+
+        <label class="table-label-highlight">
+          Total
+        </label>
+      </header>
+
+      <!-- end of table labels -->
+      
+      <section class="table-values">
+      
+        <input type="text" />
+      
+      
+        <input type="number" >
+      
+
+      
+        <input type="number" >
+      
+
+        <input type="number" >
+      
+        <input type="number">
+      
+
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+    </section>
+
+    <section class="table-values">
+      
+        <input type="text" />
+      
+      
+        <input type="number" >
+      
+
+      
+        <input type="number" >
+      
+
+      
+        <input type="number" >
+      
+      
+        <input type="number">
+      
+
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+      
+        <input type="number" >
+      
+    </section>  
+
+
     </section>
   </main>
 
