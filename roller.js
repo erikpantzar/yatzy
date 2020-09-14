@@ -8,7 +8,7 @@ if (button) {
 
 const rollDice = () => {
   const dices = document.querySelectorAll('.dice-container')
-  const ROLLING_ANIMATOIN = 700
+  const ROLLING_ANIMATION_TIME = 700
   const ROLLING_ANIMATION_CLASSNAME = 'rolling'
 
   dices.forEach((dice) => {
@@ -29,7 +29,7 @@ const rollDice = () => {
         setValueToDice(dice)
       }
     })
-  }, ROLLING_ANIMATOIN)
+  }, ROLLING_ANIMATION_TIME)
 }
 
 const setValueToDice = (diceElement) => {
