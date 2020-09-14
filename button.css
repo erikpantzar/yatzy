@@ -14,3 +14,11 @@
   transition: color 200ms ease-in-out, background 200ms ease-in-out;
 }
 
+
+.button-roller {
+  background: lavender;
+  padding: 0 20px;
+  border: 0;
+  line-height: 40px;
+  height: 40px;
+}

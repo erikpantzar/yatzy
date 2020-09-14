@@ -1,0 +1,12 @@
+.layout-dice-section {
+  display: flex;
+
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 768px) {
+  .layout-dice-section {
+    max-width: 400px;
+  }
+}
