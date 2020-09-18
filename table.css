@@ -4,7 +4,7 @@
 
 .table {
   display: grid;
-  grid-template-columns: 135px repeat(2, 120px [col-end]);
+  grid-template-columns: 105px 55px 55px 55px 55px;
 }
 
 .table-labels label {
@@ -13,6 +13,11 @@
   border-right: 0;
   border-top: 0;
   padding-top: 1px;
+  line-height: var(--cell-height);
+  height: var(--cell-height);
+  padding: 0 5px 0 0;
+  font-size: 11px;
+  text-align: right;
 }
 
 .table-labels label:first-child {
@@ -36,11 +41,6 @@
   grid-template-rows: repeat(19, var(--cell-height) [col-start]);
 }
 
-.table-labels label {
-  line-height: var(--cell-height);
-  height: var(--cell-height);
-  padding: 0 0 0 5px;
-}
 
 .table-values input {
   width: 100%;

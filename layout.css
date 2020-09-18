@@ -6,6 +6,13 @@
   
   margin-top: 1vh;
   margin-bottom: 2vh;
+
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+  top: 0;
+  z-index: 4;
+  
+  background: #fff;
 }
 
 @media (min-width: 520px) {
