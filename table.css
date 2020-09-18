@@ -23,11 +23,9 @@
 .table-values input:nth-child(8),
 .table-values input:nth-child(9),
 .table-values input:nth-child(19),
-
 .table-labels label:nth-child(8),
 .table-labels label:nth-child(9),
-.table-labels label:nth-child(19)
- {
+.table-labels label:nth-child(19) {
   border: 1px solid brown;
   z-index: 3;
 }

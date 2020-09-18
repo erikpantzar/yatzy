@@ -32,7 +32,8 @@
   <style>
   
     .footer {
-      position: sticky;
+      margin: 2vh 0 0;
+      position: relative;
       bottom: 0;
       left: 0;
       right: 0;
@@ -166,7 +167,7 @@
       </label>
 
 
-      <label class="label-dice dice-container" for="three">
+      <label class="label-dice dice-container" for="three" data-value="2">
         <input type="checkbox" id="three"></input>
         <div class="dice">
           <div class="one">
@@ -343,7 +344,7 @@
       <button class="button-roller layout-button-roller" data-attr="js-roller">Roll</button>
     </section>
 
-    <section class="table layout-yatzy-table">
+    <section class="table layout-yatzy-table" id="jsYatzyTable">
       <!--  -->
 
       <header class="table-labels">
@@ -426,60 +427,29 @@
 
       <!-- end of table labels -->
       
-      <section class="table-values">
+      <section class="table-values" data-player="1">
       
-        <input type="text" />
-      
-      
-        <input type="number" >
-      
-
-      
-        <input type="number" >
-      
-        <input type="number" >
-        <input type="number" >
-      
-        <input type="number">
-      
-
-      
-        <input type="number" >
-      
-      
-        <input type="number" >
-      
-      
-        <input type="number" >
-      
-      
-        <input type="number" >
-      
-      
-        <input type="number" >
-      
-      
-        <input type="number" >
-      
-      
-        <input type="number" >
-      
-      
-        <input type="number" >
-      
-        <input type="number" >
-      
-      
-        <input type="number" >
-      
-      
-        <input type="number" >
-      
-      
-        <input type="number" >
-      
-      
-        <input type="number" >
+        <input type="text" data-type="Name" />
+    
+        <input type="number" data-attr="js-result" data-target="1">
+        <input type="number" data-attr="js-result" data-target="2">
+        <input type="number" data-attr="js-result" data-target="3">
+        <input type="number" data-attr="js-result" data-target="4">
+        <input type="number" data-attr="js-result" data-target="5">
+        <input type="number" data-attr="js-result" data-target="6">
+        <input type="number" data-attr="js-result" data-target="sum">  
+        <input type="number" data-attr="js-result" data-target="bonus">
+        <input type="number" data-attr="js-result" data-target="pair">
+        <input type="number" data-attr="js-result" data-target="twopair">
+        <input type="number" data-attr="js-result" data-target="three" >     
+        <input type="number" data-attr="js-result" data-target="four" >
+        <input type="number" data-attr="js-result" data-target="fullhouse">
+        <input type="number" data-attr="js-result" data-target="lowstraight" >
+        <input type="number" data-attr="js-result" data-target="histraight" >     
+        <input type="number" data-attr="js-result" data-target="chance" >
+        <input type="number" data-attr="js-result" data-target="yatzy" >
+        
+        <input type="number" data-attr="js-result" data-target="total">
       
     </section>
 
@@ -488,8 +458,8 @@
         <input type="text" />
       
       
-        <input type="number" >
-        <input type="number" >
+        <input type="number" data-attr="js-result" data-target="1">
+        <input type="number" data-attr="js-result" data-target="2">
       
 
       
@@ -555,6 +525,7 @@
   </footer>
 
   <script src="./roller.js"></script>
+  <script src="./result.js"></script>
 
 </body>
 
