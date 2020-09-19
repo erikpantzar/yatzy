@@ -3,13 +3,13 @@
 
   align-items: stretch;
   justify-content: space-evenly;
-  
-  margin-top: 1vh;
-  margin-bottom: 2vh;
+  padding: 10px 0;
 
-  position: sticky;
+  position: fixed;
   position: -webkit-sticky; /* Safari */
-  top: 0;
+  bottom: 0;
+  width: 100%;
+
   z-index: 4;
   
   background: #fff;

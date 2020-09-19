@@ -1,3 +1,11 @@
+const setScore = (element, score) => {
+  element.dataset.score = score
+  element.value = score
+  element.innerHTML = score
+
+  return true
+}
+
 const handleResult = (event) => {
   const targetEl = event.srcElement
   const { attr, target } = targetEl.dataset
@@ -10,7 +18,7 @@ const handleResult = (event) => {
       case '4':
       case '5':
       case '6':
-        targetEl.value = score(Number(target))
+        setScore(targetEl, score(Number(target)))
         break
       case 'sum':
         targetEl.value = sum(targetEl)

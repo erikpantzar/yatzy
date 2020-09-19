@@ -42,9 +42,18 @@
 }
 
 
+.table-values button,
 .table-values input {
+  background: #fff;
+  padding: 0;
+  line-height: 40px;
+  box-shadow: none;
+  border-width: 0.5px;
+  border-color: #aaa;
+
   width: 100%;
   height: var(--cell-height);
   text-align: center;
   border: 1px solid #aaa;
 }
+
