@@ -99,26 +99,6 @@ const getTotal = (el) => {
   return scores.reduce((a, b) => a + b, 0)
 }
 
-// default to two for a pair
-const getTheSame = (array, amount = 2, not = null) => {
-  let result = []
-
-  const getSame = (array, index = 0) => {
-    const same = array.filter((n) => n === array[index] && n !== not)
-
-    if (same.length >= amount) {
-      result = new Array(amount).fill(same[0])
-    } else {
-      if (index !== array.length) {
-        getSame(array, index + 1)
-      }
-    }
-  }
-
-  getSame(array)
-  return result
-}
-
 const getPair = () => {
   // hi to low
   const dices = diceToArray().sort((a, b) => b - a)
