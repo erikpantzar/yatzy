@@ -1,3 +1,11 @@
+const setScore = (element, score) => {
+  element.dataset.score = score
+  element.value = score
+  element.innerHTML = score
+
+  return true
+}
+
 const handleResult = (event) => {
   const targetEl = event.srcElement
   const { attr, target } = targetEl.dataset
@@ -10,43 +18,43 @@ const handleResult = (event) => {
       case '4':
       case '5':
       case '6':
-        targetEl.value = score(Number(target))
+        setScore(targetEl, score(Number(target)))
         break
       case 'sum':
-        targetEl.value = sum(targetEl)
+        setScore(targetEl, sum(targetEl))
         break
       case 'bonus':
-        targetEl.value = getBonus(targetEl) ? 50 : 0
+        setScore(targetEl, getBonus(targetEl) ? 50 : 0)
         break
       case 'pair':
-        targetEl.value = getPair()
+        setScore(targetEl, getPair())
         break
       case 'twopair':
-        targetEl.value = getTwoPair()
+        setScore(targetEl, getTwoPair())
         break
       case 'three':
-        targetEl.value = threeOfAKind()
+        setScore(targetEl, threeOfAKind())
         break
       case 'four':
-        targetEl.value = fourOfAkind()
+        setScore(targetEl, fourOfAkind())
         break
       case 'fullhouse':
-        targetEl.value = fullHouse()
+        setScore(targetEl, fullHouse())
         break
       case 'lowstraight':
-        targetEl.value = loLadder()
+        setScore(targetEl, loLadder())
         break
       case 'histraight':
-        targetEl.value = hiLadder()
+        setScore(targetEl, hiLadder())
         break
       case 'chance':
-        targetEl.value = chance()
+        setScore(targetEl, chance())
         break
       case 'yatzy':
-        targetEl.value = yatzee()
+        setScore(targetEl, yatzee())
         break
       case 'total':
-        targetEl.value = getTotal(targetEl)
+        setScore(targetEl, getTotal(targetEl))
         break
       default:
         return false
@@ -97,26 +105,6 @@ const getTotal = (el) => {
     })
 
   return scores.reduce((a, b) => a + b, 0)
-}
-
-// default to two for a pair
-const getTheSame = (array, amount = 2, not = null) => {
-  let result = []
-
-  const getSame = (array, index = 0) => {
-    const same = array.filter((n) => n === array[index] && n !== not)
-
-    if (same.length >= amount) {
-      result = new Array(amount).fill(same[0])
-    } else {
-      if (index !== array.length) {
-        getSame(array, index + 1)
-      }
-    }
-  }
-
-  getSame(array)
-  return result
 }
 
 const getPair = () => {

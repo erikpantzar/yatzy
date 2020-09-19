@@ -17,7 +17,6 @@ const getTheSame = (array, amount = 2, not = null) => {
   getSame(array)
   return result
 }
-
 // TESTS
 if (false) {
   console.log(

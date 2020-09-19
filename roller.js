@@ -53,4 +53,5 @@ const rollDice = (skipAnimation = false) => {
 }
 
 // initial roll
-rollDice(true)
+const skipAnimation = true
+rollDice(skipAnimation)
