@@ -21,40 +21,40 @@ const handleResult = (event) => {
         setScore(targetEl, score(Number(target)))
         break
       case 'sum':
-        targetEl.value = sum(targetEl)
+        setScore(targetEl, sum(targetEl))
         break
       case 'bonus':
-        targetEl.value = getBonus(targetEl) ? 50 : 0
+        setScore(targetEl, getBonus(targetEl) ? 50 : 0)
         break
       case 'pair':
-        targetEl.value = getPair()
+        setScore(targetEl, getPair())
         break
       case 'twopair':
-        targetEl.value = getTwoPair()
+        setScore(targetEl, getTwoPair())
         break
       case 'three':
-        targetEl.value = threeOfAKind()
+        setScore(targetEl, threeOfAKind())
         break
       case 'four':
-        targetEl.value = fourOfAkind()
+        setScore(targetEl, fourOfAkind())
         break
       case 'fullhouse':
-        targetEl.value = fullHouse()
+        setScore(targetEl, fullHouse())
         break
       case 'lowstraight':
-        targetEl.value = loLadder()
+        setScore(targetEl, loLadder())
         break
       case 'histraight':
-        targetEl.value = hiLadder()
+        setScore(targetEl, hiLadder())
         break
       case 'chance':
-        targetEl.value = chance()
+        setScore(targetEl, chance())
         break
       case 'yatzy':
-        targetEl.value = yatzee()
+        setScore(targetEl, yatzee())
         break
       case 'total':
-        targetEl.value = getTotal(targetEl)
+        setScore(targetEl, getTotal(targetEl))
         break
       default:
         return false
