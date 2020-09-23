@@ -17,12 +17,13 @@
     height: 40px;
     width: 40px;
     overflow: hidden;
+    background: var(--dice-background);
 }
 
 .dice > div {
     width: 40px;
     height: 40px;
-    background: var(--dice-background);
+    
 }
 
 .one {

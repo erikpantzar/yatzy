@@ -6,12 +6,11 @@
   padding: 10px 0;
 
   position: fixed;
-  position: -webkit-sticky; /* Safari */
   bottom: 0;
   width: 100%;
 
+  background: var(--body-background);
   z-index: 4;
-
 }
 
 @media (min-width: 520px) {
@@ -30,7 +29,9 @@
  /* @media (min-width: 480px) {
   .layout-yatzy-table {}
 }  */
-
+.layout-main {
+  padding-bottom: 90px;
+}
 
 @media (min-width: 520px) {
   .layout-main {
@@ -38,5 +39,6 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: stretch;
+    padding-bottom: 0;
   }
 }
