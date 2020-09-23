@@ -1,3 +1,16 @@
+:root {
+    --body-color: #444;
+    --body-background: #fff;
+}
+
+
+@media (prefers-color-scheme: dark) { 
+    :root {
+        --body-color: yellow;
+        --body-background: #222;
+    }
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -12,5 +25,7 @@ input {
 body {
     font-family: sans-serif;
     font: 1rem/1.5 sans-serif;
-    color: #444;
+    color: var(--body-color);
+    background: var(--body-background);
   }
+

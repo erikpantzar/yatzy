@@ -1,22 +1,33 @@
+:root {
+  --button-background: #eee;
+  --button-color: skyblue;
+}
+
+
+@media (prefers-color-scheme: dark) { 
+  :root {
+    --button-background: #000;
+    --button-color: cyan;
+  }
+}
+
 .link-button {
-  border: 1px solid lavender;
+  border: none;
   padding: 8px 12px;
-  background: #eee;
-  color: skyblue;
+  background: var(--button-background);
+  color: var(--button-color);
 
   transition: color 200ms ease-in-out, background 200ms ease-in-out;
 }
 
 .link-button:hover {
-  background: darkcyan;
-  color: lavender;
-
   transition: color 200ms ease-in-out, background 200ms ease-in-out;
 }
 
 
 .button-roller {
-  background: lavender;
+  background: var(--button-background);
+  color: var(--button-color);
   padding: 0 20px;
   border: 0;
   line-height: 40px;

@@ -1,3 +1,18 @@
+:root {
+    --dice-background: #efefef;    
+    --dice-dot-background: #444;
+    --dice-selected-background: red;
+}
+
+
+@media (prefers-color-scheme: dark) { 
+    :root {
+        --dice-background: #444;    
+        --dice-dot-background: yellow;
+        --dice-selected-background: cyan;
+    }
+}
+
 .dice {
     height: 40px;
     width: 40px;
@@ -7,7 +22,7 @@
 .dice > div {
     width: 40px;
     height: 40px;
-    background: #efefefef;
+    background: var(--dice-background);
 }
 
 .one {
@@ -17,7 +32,7 @@
 }
 
 .dot {
-    background: #444;
+    background: var(--dice-dot-background);
     border-radius: 40%;
     display: block;
     height: 5px;
@@ -134,12 +149,9 @@
     animation-duration: 550ms;
 }
 
-
-
 /* 
     Value presentaion
 */
-
 [data-value="6"] .dice > div {
     transform: translateY(-200px);
 }
@@ -176,6 +188,7 @@
     display: none;
 }
 
+
 input:checked + .dice  {
-    background: red;
+    background: var(--dice-selected-background);
 }

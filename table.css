@@ -1,15 +1,30 @@
 :root {
   --cell-height: 40px;
+  --cell-border: #aaa;
+  --cell-highlight-border: brown;
+  --cell-background: #fff;
+  --cell-color: #444;
+}
+
+@media (prefers-color-scheme: dark) { 
+  :root {
+    --cell-border: yellow;
+    --cell-highlight-border: pink;
+    --cell-background: black;
+    --cell-color: #fff;
+  }
 }
 
 .table {
   display: grid;
   grid-template-columns: 105px 55px 55px 55px 55px;
+  background: var(--cell-background);
+  color: var(--cell-color);
 }
 
 .table-labels label {
-  border: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
+  border: 1px solid var(--cell-border);
+  border-bottom: 1px solid var(--cell-border);
   border-right: 0;
   border-top: 0;
   padding-top: 1px;
@@ -18,11 +33,11 @@
   padding: 0 5px 0 0;
   font-size: 11px;
   text-align: right;
-}
+}b
 
 .table-labels label:first-child {
   height: 39px;
-  border-top: 1px solid #aaa;
+  border-top: 1px solid var(--cell-border);
 }
 
 .table-values input:nth-child(8),
@@ -31,7 +46,7 @@
 .table-labels label:nth-child(8),
 .table-labels label:nth-child(9),
 .table-labels label:nth-child(19) {
-  border: 1px solid brown;
+  border: 1px solid var(--cell-highlight-border);
   z-index: 3;
 }
 
@@ -44,16 +59,17 @@
 
 .table-values button,
 .table-values input {
-  background: #fff;
+  background: var(--cell-background);
+  color: var(--cell-color);
   padding: 0;
   line-height: 40px;
   box-shadow: none;
   border-width: 0.5px;
-  border-color: #aaa;
+  border-color: var(--cell-border);
 
   width: 100%;
   height: var(--cell-height);
   text-align: center;
-  border: 1px solid #aaa;
+  border: 1px solid var(--cell-border);
 }
 
