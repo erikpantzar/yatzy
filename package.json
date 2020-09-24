@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "testcafe firefox:headless testcafe.test.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "eslint": "^7.9.0",
-    "prettier": "^2.1.1"
+    "prettier": "^2.1.1",
+    "testcafe": "^1.9.3"
   },
   "prettier": {
     "trailingComma": "es5",
