@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe firefox:headless testcafe.test.js"
+    "test": "testcafe firefox:headless tests/testcafe.test.js"
   },
   "author": "",
   "license": "ISC",
