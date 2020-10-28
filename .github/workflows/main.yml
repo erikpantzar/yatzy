@@ -3,11 +3,11 @@ on: [push]
 
 jobs:
   build:
-    name: Run Tests Across Node.js Versions and Operating Systems
-    runs-on: ${{ matrix.os }}
+    name: Run Tests
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: [windows-latest]
+        os: [ubuntu-latest]
         node: [12]
     steps:
       - uses: actions/setup-node@v1
@@ -19,4 +19,7 @@ jobs:
         with:
           node-version: '12.x'
       - run: npm install
-      - run: npm test
+      - name: Run TestCafe Tests
+          uses: DevExpress/testcafe-action@latest
+            with:
+            args: "chrome:headless tests --app 'npm run serve'"
