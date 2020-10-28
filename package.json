@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe firefox:headless tests/testcafe.test.js"
+    "test": "testcafe firefox:headless tests/testcafe.test.js --app 'npm run serve'",
+    "serve": "http-server ./"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "eslint": "^7.9.0",
     "prettier": "^2.1.1",
-    "testcafe": "^1.9.3"
+    "testcafe": "^1.9.3",
+    "http-server": "latest"
   },
   "prettier": {
     "trailingComma": "es5",
