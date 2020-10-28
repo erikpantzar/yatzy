@@ -20,6 +20,6 @@ jobs:
           node-version: '12.x'
       - run: npm install
       - name: Run TestCafe Tests
-          uses: DevExpress/testcafe-action@latest
-            with:
-            args: "chrome:headless tests --app 'npm run serve'"
+        uses: DevExpress/testcafe-action@latest
+          with:
+          args: "chrome:headless tests --app 'npm run serve'"
