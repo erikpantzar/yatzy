@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   build:
-    name: Run Tests
+    name: Run Tests w Cafe
     runs-on: ubuntu-latest
     strategy:
       matrix:
