@@ -14,7 +14,9 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - uses: actions/checkout@v1
-      - name: Run TestCafe Tests
-        uses: DevExpress/testcafe-action@latest
+      - name: Use Node.js
+        uses: actions/setup-node@v1
         with:
-          args: "chrome tests"
+          node-version: '12.x'
+      - run: npm install
+      - run: npm test
