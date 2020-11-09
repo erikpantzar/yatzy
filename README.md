@@ -1,4 +1,4 @@
-# Yatzy Caddee
+# Yatzy
 
 Goal is to never have to play Yatzy again.
 
