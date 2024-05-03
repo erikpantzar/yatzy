@@ -1,7 +1,8 @@
 :root {
     --dice-background: #efefef;    
     --dice-dot-background: #444;
-    --dice-selected-background: red;
+    --dice-dot-background-selected: #111;
+    --dice-selected-background: pink;
 }
 
 
@@ -9,7 +10,8 @@
     :root {
         --dice-background: #444;    
         --dice-dot-background: yellow;
-        --dice-selected-background: cyan;
+        --dice-dot-background-selected: red;
+        --dice-selected-background: lightblue;
     }
 }
 
@@ -18,6 +20,10 @@
     width: 40px;
     overflow: hidden;
     background: var(--dice-background);
+}
+
+input:checked + div .dot {
+    background: var(--dice-dot-background-selected);
 }
 
 .dice > div {

@@ -1,18 +1,16 @@
 {
   "name": "yatzee-caddee",
   "version": "1.0.0",
-  "description": "",
+  "description": "Never play a game of yatzy again",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe firefox:headless tests/testcafe.test.js --app 'npm run serve'",
-    "serve": "http-server ./"
+    "serve": ""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "eslint": "^7.9.0",
     "prettier": "^2.1.1",
-    "testcafe": "^1.9.3",
     "http-server": "latest"
   },
   "prettier": {

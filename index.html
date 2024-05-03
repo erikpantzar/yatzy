@@ -24,6 +24,21 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
+  <script>
+      // Check if the page is not being accessed from localhost
+      if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
+          window.addEventListener('beforeunload', function(event) {
+              // Cancel the event as a precaution.
+              event.preventDefault();
+              // Chrome requires returnValue to be set.
+              event.returnValue = '';
+              // Prompt the user with a confirmation message.
+              return 'Are you sure you want to leave?';
+          });
+      }
+  </script>
+  
+
   <link rel="stylesheet" href="./styles/reset.css" />
   <link rel="stylesheet" href="./styles/dice.css" />
   <link rel="stylesheet" href="./styles/button.css" />
